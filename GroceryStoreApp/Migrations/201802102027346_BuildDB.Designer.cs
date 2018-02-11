@@ -7,13 +7,13 @@ namespace GroceryStoreApp.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class init : IMigrationMetadata
+    public sealed partial class BuildDB : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(init));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(BuildDB));
         
         string IMigrationMetadata.Id
         {
-            get { return "201802101625505_init"; }
+            get { return "201802102027346_BuildDB"; }
         }
         
         string IMigrationMetadata.Source

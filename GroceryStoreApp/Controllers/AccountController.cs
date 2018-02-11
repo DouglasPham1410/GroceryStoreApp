@@ -24,12 +24,6 @@ namespace GroceryStoreApp.Controllers
         {
         }
 
-        public AccountController(UserManager userManager, SignInManager signInManager)
-        {
-            UserManager = userManager;
-            SignInManager = signInManager;
-        }
-
         public SignInManager SignInManager
         {
             get
@@ -114,6 +108,15 @@ namespace GroceryStoreApp.Controllers
             }
 
             return View(model);
+        }
+        //
+        // POST: /Account/LogOff
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult LogOff()
+        {
+            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            return RedirectToAction("Index", "Home");
         }
         #region Helpers
         // Used for XSRF protection when adding external logins

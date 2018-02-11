@@ -1,0 +1,14 @@
+﻿@model IList<GroceryStoreApp.ViewModels.ProductViewModel>
+
+@{
+    ViewBag.Title = "ProductsByCategory";
+}
+
+<h2>ProductsByCategory</h2>
+
+@foreach(var p in Model)
+{
+    <h1>@p.Name</h1>
+    <p>@p.Price</p>
+}
+

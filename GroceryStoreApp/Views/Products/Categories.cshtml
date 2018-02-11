@@ -1,0 +1,13 @@
+﻿@model IList<GroceryStoreApp.ViewModels.CateroryViewModel>
+
+@{
+    ViewBag.Title = "Categories";
+}
+
+<h2>Categories</h2>
+@foreach (var c in Model)
+{
+    <h3>@c.Name</h3>
+    @Html.ActionLink(c.Name,"ProductsByCategory","Products",new { Id =c.Id},null)
+}
+

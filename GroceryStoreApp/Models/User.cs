@@ -19,6 +19,6 @@ namespace GroceryStoreApp.Models
             return userIdentity;
         }
 
-      
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }
